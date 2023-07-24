@@ -133,7 +133,7 @@ class MyApp extends StatelessWidget {
                             Row(
                               children: [
                                 const Text(
-                                  '6 429',
+                                  '6 428',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 20,
@@ -152,6 +152,11 @@ class MyApp extends StatelessWidget {
                               ],
                             ),
                           ],
+                        ),
+                        const Icon(
+                          Icons.euro_rounded,
+                          color: Colors.white,
+                          size: 78,
                         )
                       ],
                     ),
