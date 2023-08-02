@@ -7,24 +7,75 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen>
-    with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(vsync: this);
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
+      body: Column(children: [
+        Flexible(
+          flex: 1,
+          child: Container(
+            alignment: Alignment.bottomCenter,
+            child: Text(
+              '24:00',
+              style: TextStyle(
+                color: Theme.of(context).cardColor,
+                fontSize: 80,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ),
+        ),
+        Flexible(
+          flex: 2,
+          child: Center(
+            child: IconButton(
+              iconSize: 99,
+              color: Theme.of(context).cardColor,
+              onPressed: () {},
+              icon: const Icon(
+                Icons.play_circle_outline,
+              ),
+            ),
+          ),
+        ),
+        Flexible(
+          flex: 1,
+          child: Row(
+            children: [
+              Expanded(
+                child: Container(
+                  decoration: BoxDecoration(color: Theme.of(context).cardColor),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Pomodors',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color:
+                              Theme.of(context).textTheme.displayLarge!.color,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Text(
+                        '0',
+                        style: TextStyle(
+                          fontSize: 60,
+                          color:
+                              Theme.of(context).textTheme.displayLarge!.color,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ]),
+    );
   }
 }
