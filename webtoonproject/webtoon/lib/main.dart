@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:webtoon/screens/home_screen.dart';
+import 'package:webtoon/services/api_service.dart';
 
 void main() {
-  runApp(const MainApp());
+  ApiService().getTodaysToons();
+  runApp(const App());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class App extends StatelessWidget {
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+      home: HomeScreen(),
     );
   }
 }
+l;
