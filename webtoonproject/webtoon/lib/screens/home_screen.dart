@@ -65,7 +65,13 @@ class HomeScreen extends StatelessWidget {
                   )
                 ],
               ),
-              child: Image.network(webtoon.thumb),
+              child: Image.network(
+                webtoon.thumb,
+                headers: const {
+                  "User-Agent":
+                      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
+                },
+              ),
             ),
             const SizedBox(
               height: 10,
