@@ -162,7 +162,7 @@ class FirebaseAuthUIExample extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 8),
                 child: Text(
                   action == AuthAction.signIn
-                      ? 'Welcome to Firebase UI! Please sign in to continue.'
+                      ? '어서오세요. Sign in 버튼을 통해 진행할 수 있습니다'
                       : 'Welcome to Firebase UI! Please create an account to continue',
                 ),
               );
