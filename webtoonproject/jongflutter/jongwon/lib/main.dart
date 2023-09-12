@@ -7,14 +7,10 @@ import 'package:firebase_auth/firebase_auth.dart'
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:firebase_ui_localizations/firebase_ui_localizations.dart';
-import 'package:firebase_ui_oauth_apple/firebase_ui_oauth_apple.dart';
-import 'package:firebase_ui_oauth_facebook/firebase_ui_oauth_facebook.dart';
 import 'package:firebase_ui_oauth_google/firebase_ui_oauth_google.dart';
-import 'package:firebase_ui_oauth_twitter/firebase_ui_oauth_twitter.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
 import 'config.dart';
 import 'decorations.dart';
 import 'firebase_options.dart';
@@ -40,13 +36,6 @@ Future<void> main() async {
     emailLinkProviderConfig,
     PhoneAuthProvider(),
     GoogleProvider(clientId: GOOGLE_CLIENT_ID),
-    AppleProvider(),
-    FacebookProvider(clientId: FACEBOOK_CLIENT_ID),
-    TwitterProvider(
-      apiKey: TWITTER_API_KEY,
-      apiSecretKey: TWITTER_API_SECRET_KEY,
-      redirectUri: TWITTER_REDIRECT_URI,
-    ),
   ]);
 
   runApp(const FirebaseAuthUIExample());
@@ -173,7 +162,7 @@ class FirebaseAuthUIExample extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 16),
                   child: Text(
                     action == AuthAction.signIn
-                        ? 'By signing in, you agree to our terms and conditions.'
+                        ? '로그인을 통해 귀하는 당사의 약관에 동의합니다.'
                         : 'By registering, you agree to our terms and conditions.',
                     style: const TextStyle(color: Colors.grey),
                   ),
