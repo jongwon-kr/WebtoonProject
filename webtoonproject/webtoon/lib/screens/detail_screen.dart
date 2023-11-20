@@ -67,11 +67,11 @@ class _DetailScreenState extends State<DetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal[50],
+      backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
         elevation: 2,
-        backgroundColor: Colors.green[50],
+        backgroundColor: Colors.yellow[50],
         foregroundColor: Colors.green,
         actions: [
           IconButton(

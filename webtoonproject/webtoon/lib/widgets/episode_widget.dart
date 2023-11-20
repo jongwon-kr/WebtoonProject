@@ -26,23 +26,26 @@ class Episode extends StatelessWidget {
         margin: const EdgeInsets.only(bottom: 10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: Colors.green.shade400,
+          color: Colors.yellow,
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              episode.title,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 16,
+        child: Padding(
+          padding: const EdgeInsets.only(left: 12, top: 6, bottom: 6),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                episode.title,
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 16,
+                ),
               ),
-            ),
-            const Icon(
-              Icons.chevron_right_rounded,
-              color: Colors.white,
-            ),
-          ],
+              const Icon(
+                Icons.chevron_right_rounded,
+                color: Colors.black,
+              ),
+            ],
+          ),
         ),
       ),
     );

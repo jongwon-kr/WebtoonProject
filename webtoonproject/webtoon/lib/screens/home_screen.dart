@@ -11,11 +11,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal[50],
+      backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
         elevation: 2,
-        backgroundColor: Colors.green[50],
+        backgroundColor: Colors.yellow[50],
         foregroundColor: Colors.green,
         title: const Text(
           'Today\'s toons',
