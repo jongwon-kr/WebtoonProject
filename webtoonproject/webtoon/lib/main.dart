@@ -15,6 +15,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       home: HomeScreen(),
       debugShowCheckedModeBanner: false,
+      // 디버그 제거
     );
   }
 }
